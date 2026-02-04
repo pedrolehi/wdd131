@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação de Produto</title>
+  <meta name="description" content="Exemplo de formulário de avaliação de produto para WDD 131">
+  <meta name="author" content="Rubia M. Francesco">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Great+Vibes&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
+  <script defer src="scripts/form.js"></script>
+  <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Avaliação de Produto</h1>
+    
+  </header>
+  <main>
+    <form action="review.html" method="get">
+
+      <div class="item">
+        <label for="product_name">Nome do Produto</label>
+        <select id="product_name" name="product_name" required>
+          <option value="" selected disabled>Escolha um Produto ...</option>
+          <option value="product1">Produto 1</option>
+          <option value="product2">Produto 2</option>
+          <option value="product3">Produto 3</option>
+        </select>
+      </div>
+
+      <div class="item">
+        <p>Avaliação Geral</p>
+        <div class="radio-group">
+          <label for="overall-1">&star;</label>
+          <label for="overall-2">&star;&star;</label>
+          <label for="overall-3">&star;&star;&star;</label>
+          <label for="overall-4">&star;&star;&star;&star;</label>
+          <label for="overall-5">&star;&star;&star;&star;&star;</label>
+          <input type="radio" id="overall-1" name="overall" required>
+          <input type="radio" id="overall-2" name="overall" required>
+          <input type="radio" id="overall-3" name="overall" required>
+          <input type="radio" id="overall-4" name="overall" required>
+          <input type="radio" id="overall-5" name="overall" required>
+        </div>
+      </div>
+
+      <div class="item">
+        <label>Data de Instalação
+          <input type="date" id="install" name="install" required></label>
+      </div>
+
+      <div class="item">
+        <p>Quais recursos você achou úteis no produto?<br>
+          <em>(Marque todos que se aplicam)</em>
+        </p>
+        <div class="checkbox-group">
+          <input type="checkbox" id="durablility" name="durability" value="durability">
+          <label for="durablility">Durabilidade</label>
+          <input type="checkbox" id="ease" name="ease" value="ease">
+          <label for="ease">Facilidade de Uso</label>
+          <input type="checkbox" id="performance" name="performance" value="performance">
+          <label for="performance">Desempenho</label>
+          <input type="checkbox" id="design" name="design" value="design">
+          <label for="design">Design</label>
+        </div>
+      </div>
+
+      <div class="item">
+        <label for="review">Avaliação Escrita <span class="smaller">(Opcional)</span></label>
+        <textarea id="review" name="review"></textarea>
+      </div>
+
+      <div class="item">
+        <label for="user">Seu Nome <span class="smaller">(Opcional)</span></label>
+        <input type="text" id="user" name="user">
+      </div>
+
+      <input type="submit" value="Publicar Avaliação">
+
+    </form>
+  </main>
+  <footer>
+    <p><span id="currentYear"></span> 🌺 Rubia Magdelena Francesco 🌺 Madagascar</p>
+    <p class="highlight" id="lastModified">Última Modificação: 01/01/1970 12:00:00</p>
+  </footer>
+</body>
+
+</html>

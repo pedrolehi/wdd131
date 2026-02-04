@@ -1,0 +1,133 @@
+:root {
+  --red: rgba(210, 16, 52, 1);
+  --green: rgba(0, 120, 73, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  background-color: var(--red);
+}
+
+header,
+footer {
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+aside {
+  background-color: var(--green);
+  padding: .5rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h2 {
+  padding: 1rem;
+}
+
+.card {
+  background-color: white;
+}
+
+.col-2 {
+  display: grid;
+  grid-gap: .5rem;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+}
+
+.label {
+  font-weight: bold;
+  font-size: .85rem;
+  text-align: right;
+}
+
+.value {
+  font-size: .9rem;
+  text-align: left;
+}
+
+.info,
+.weather {
+  text-align: center;
+}
+
+.weather svg {
+  width: 100px;
+  height: auto;
+}
+
+.cls-1 {
+  fill: #231815;
+}
+
+.cls-2 {
+  fill: #d8bf9e;
+}
+
+.cls-3 {
+  fill: #f8b62d;
+}
+
+@media (min-width: 600px) {
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  main {
+    position: relative;
+  }
+
+  .card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2rem #000;
+    opacity: 0.8;
+  }
+
+  .card h2 {
+    margin: .5rem -.5rem .5rem -.5rem;
+    background-color: var(--green);
+    color: white;
+    width: 90%;
+    text-align: left;
+  }
+
+  .info {
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+  }
+
+  .weather {
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
+  }
+
+  .weather h2::after {
+    content: "⛅";
+    position: absolute;
+    right: 3rem;
+    top: 1.25rem;
+  }
+
+  #weather-icon {
+    display: none;
+  }
+}

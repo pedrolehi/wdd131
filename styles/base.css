@@ -1,0 +1,181 @@
+:root {
+  --blue: rgb(29, 77, 114);
+  --blue-1: rgba(29, 77, 114, 0.1);
+  --blue-7: rgba(29, 77, 114, 0.7);
+  --brown: rgba(100, 50, 25, 1);
+  --yellow: rgba(255, 255, 0, 1);
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: #333;
+}
+
+header {
+  background-color: var(--blue);
+  color: #fff;
+}
+
+#course-title {
+  display: block;
+  font-size: 1.2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  background-color: #333;
+  display: flex;
+
+  & a {
+    flex: 1 1 100%;
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+    padding: 0.5rem;
+    color: #fff;
+    text-decoration: none;
+
+    & :visited {
+      color: #fff;
+    }
+
+    & :hover {
+      color: #fff;
+      background-color: var(--brown);
+      font-weight: 600;
+    }
+  }
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 0.5rem;
+  padding: 1rem;
+}
+
+h1 {
+  grid-column: 1/3;
+  font-size: 2rem;
+  margin: .5rem;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  background-color: var(--blue);
+  color: #fff;
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  border-radius: .5rem .5rem 0 0;
+  padding: 0.5rem;
+}
+
+footer {
+  font-size: 0.9rem;
+  padding: 1rem;
+  background-color: var(--blue);
+  color: #fff;
+
+  & p {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border: 1px solid rgb(0 0 0 / 30%);
+  margin: .5rem;
+}
+
+.profile {
+  width: 120px;
+  height: auto;
+  margin-right: 2rem
+}
+
+.card {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: .5rem;
+  border: 1px solid rgb(0 0 0 / 30%)
+}
+
+.card p {
+  padding: 1rem;
+}
+
+.me img {
+  float: right;
+}
+
+.country {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.country h3 {
+  grid-column: 1/3;
+  text-align: center;
+  border-bottom: 1px solid #bbb;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80%;
+}
+
+.highlight {
+  color: yellow;
+  font-size: smaller;
+}
+
+figure {
+  margin: .5rem;
+}
+
+figcaption {
+  font-size: smaller;
+  text-align: center;
+  font-style: italic;
+}* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+}
+
+footer {
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 1rem;
+    background-color: #eee;
+    text-align: center;
+}

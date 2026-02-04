@@ -1,0 +1,135 @@
+:root {
+  --purple: rgb(60, 10, 100);
+  --blue: rgb(29, 77, 114);
+  --blue-1: rgba(29, 77, 114, 0.1);
+  --blue-7: rgba(29, 77, 114, 0.7);
+  --brown: rgba(100, 50, 25, 1);
+  --yellow: rgba(255, 255, 0, 1);
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+}
+
+header {
+  background-color: var(--purple);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+h1 {
+  padding: 1.5rem;
+}
+
+#hambutton {
+  display: block;
+  font-size: 3rem;
+  background-color: var(--purple);
+  text-decoration: none;
+  color: white;
+  border: none;
+  padding: 0 .5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+}
+
+#hambutton::before {
+  content: "≡";
+}
+
+#hambutton.show::before {
+  content: "X";
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  display: none;
+  font-size: 2rem;
+}
+
+nav a:hover,
+nav a:active {
+  color: var(--yellow);
+  font-weight: 700;
+}
+
+nav a:hover~#navmenu~#hambutton {
+  background-color: var(---yellow);
+  color: #000;
+}
+
+nav.show {
+  width: 100%;
+}
+
+h1.show {
+  display: none;
+}
+
+.show a {
+  display: block;
+  text-align: center;
+}
+
+main {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+}
+
+main img {
+  width: 100%;
+  height: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.res-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1rem;
+}
+
+figure {
+  margin-bottom: 1rem;
+}
+
+figcaption {
+  text-align: center;
+  color: var(--purple);
+}
+
+footer {
+  background-color: var(--purple);
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.smaller {
+  font-size: smaller;
+}
