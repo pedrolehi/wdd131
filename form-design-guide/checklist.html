@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist de Boas Práticas em Formulários</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="checklist.css">
+</head>
+<body>
+    <header>
+        <h1>Checklist de Boas Práticas</h1>
+        <p class="subtitle">Avaliação de formulários web</p>
+    </header>
+
+    <main>
+        <p class="intro">Use este checklist para avaliar se seu formulário segue as melhores práticas de design e usabilidade.</p>
+
+        <!-- BLOCO 1: CONTEÚDO E ESTRUTURA -->
+        <section class="checklist-section">
+            <h2>1. Conteúdo e Estrutura</h2>
+
+            <!-- Item: Título descritivo -->
+            <div class="checklist-item">
+                <div class="check-info">
+                    <input type="checkbox" class="check-box">
+                    <div class="check-content">
+                        <strong>Título descritivo</strong>
+                        <p>O formulário tem um título claro que descreve seu propósito.</p>
+                    </div>
+                </div>
+                <div class="check-example">
+                    <div class="ex-wrong">
+                        <span class="ex-label">✗</span>
+                        <span class="ex-text">Formulário</span>
+                    </div>
+                    <div class="ex-correct">
+                        <span class="ex-label">✓</span>
+                        <span class="ex-text">Propor Novo Curso</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item: Botão de ação específico -->
+            <div class="checklist-item">
+                <div class="check-info">
+                    <input type="checkbox" class="check-box">
+                    <div class="check-content">
+                        <strong>Botão de ação específico</strong>
+                        <p>O botão NÃO diz apenas "Enviar" — descreve a ação.</p>
+                    </div>
+                </div>
+                <div class="check-example">
+                    <div class="ex-wrong">
+                        <button class="btn-demo btn-bad">Enviar</button>
+                    </div>
+                    <div class="ex-correct">
+                        <button class="btn-demo btn-good">Propor Curso</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item: Campos obrigatórios -->
+            <div class="checklist-item">
+                <div class="check-info">
+                    <input type="checkbox" class="check-box">
+                    <div class="check-content">
+                        <strong>Campos obrigatórios identificados</strong>
+                        <p>Campos obrigatórios estão claramente marcados.</p>
+                    </div>
+                </div>
+                <div class="check-example">
+                    <div class="ex-wrong">
+                        <label class="label-demo">Nome</label>
+                    </div>
+                    <div class="ex-correct">
+                        <label class="label-demo">Nome <span class="required">*</span></label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item: Coluna única -->
+            <div class="checklist-item">
+                <div class="check-info">
+                    <input type="checkbox" class="check-box">
+                    <div class="check-content">
+                        <strong>Formulário em coluna única</strong>
+                        <p>Layout em uma coluna para preenchimento sequencial.</p>
+                    </div>
+                </div>
+                <div class="check-example">
+                    <div class="ex-wrong">
+                        <div class="layout-multi">
+                            <div class="mini-field"></div>
+                            <div class="mini-field"></div>
+                        </div>
+                        <div class="layout-multi">
+                            <div class="mini-field"></div>
+                            <div class="mini-field"></div>
+                        </div>
+                    </div>
+                    <div class="ex-correct">
+                        <div class="layout-single">
+                            <div class="mini-field wide"></div>
+                            <div class="mini-field wide"></div>
+                            <div class="mini-field wide"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item: Dividido em blocos -->
+            <div class="checklist-item">
+                <div class="check-info">
+                    <input type="checkbox" class="check-box">
+                    <div class="check-content">
+                        <strong>Dividido em blocos</strong>
+                        <p>Formulários longos são divididos em seções.</p>
+                    </div>
+                </div>
+                <div class="check-example">
+                    <div class="ex-wrong">
+                        <div class="block-demo continuous">
+                            <div class="mini-line"></div>
+                            <div class="mini-line"></div>
+                            <div class="mini-line"></div>
+                            <div class="mini-line"></div>
+                            <div class="mini-line"></div>
+                        </div>
+                    </div>
+                    <div class="ex-correct">
+                        <div class="block-demo sectioned">
+                            <div class="mini-section">
+                                <div class="mini-line"></div>
+                                <div class="mini-line"></div>
+                            </div>
+                            <div class="mini-section">
+                                <div class="mini-line"></div>
+                                <div class="mini-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOCO 2: LABELS E TEXTOS -->
+        <section class="checklist-section">
+            <h2>2. Labels e Textos</h2>
+
+            <!-- Item: Labels acima -->
+            <div class="checklist-item">
+                <div class="check-info">
+                    <input type="checkbox" class="check-box">
+                    <div class="check-content">
+                        <strong>Labels acima e alinhados à esquerda</strong>
+                        <p>Rótulos posicionados acima dos campos.</p>
+                    </div>
+                </div>
+                <div class="check-example">
+                    <div class="ex-wrong">
+                        <div class="label-inline">
+                            <label class="label-demo small">Nome</label>
+                            <input type="text" class="input-demo small">
+                        </div>
+                    </div>
+                    <div class="ex-correct">
+                        <div class="label-above">
+                            <label class="label-demo small">Nome</label>
+                            <input type="text" class="input-demo small">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item: Placeholder -->
+            <div class="checklist-item">
+                <div class="check-info">
+                    <input type="checkbox" class="check-box">
+                    <div class="check-content">
+                        <strong>Placeholder não substitui label</strong>
+                        <p>Placeholder é complementar, não substituto.</p>
+                    </div>
+                </div>
+                <div class="check-example">
+                    <div class="ex-wrong">
+                        <input type="text" class="input-demo" placeholder="Digite seu nome">
+                    </div>
+                    <div class="ex-correct">
+                        <label class="label-demo small">Nome</label>
+                        <input type="text" class="input-demo" placeholder="ex: João Silva">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item: Instruções agrupadas -->
+            <div class="checklist-item">
+                <div class="check-info">
+                    <input type="checkbox" class="check-box">
+                    <div class="check-content">
+                        <strong>Instruções agrupadas</strong>
+                        <p>Instruções próximas ao campo relacionado.</p>
+                    </div>
+                </div>
+                <div class="check-example">
+                    <div class="ex-wrong">
+                        <label class="label-demo small">Senha</label>
+                        <input type="password" class="input-demo">
+                        <p class="hint-demo far">Mín. 8 caracteres</p>
+                    </div>
+                    <div class="ex-correct">
+                        <label class="label-demo small">Senha</label>
+                        <input type="password" class="input-demo">
+                        <p class="hint-demo close">Mín. 8 caracteres</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOCO 3: INPUTS E CONTROLES -->
+        <section class="checklist-section">
+            <h2>3. Inputs e Controles</h2>
+
+            <!-- Item: Telefone único -->
+            <div class="checklist-item">
+                <div class="check-info">
+                    <input type="checkbox" class="check-box">
+                    <div class="check-content">
+                        <strong>Campo de telefone único</strong>
+                        <p>Telefone em um único campo, não separado.</p>
+                    </div>
+                </div>
+                <div class="check-example">
+                    <div class="ex-wrong">
+                        <div class="phone-split">
+                            <input type="text" class="input-demo tiny" placeholder="DDD">
+                            <input type="text" class="input-demo tiny" placeholder="Número">
+                        </div>
+                    </div>
+                    <div class="ex-correct">
+                        <input type="tel" class="input-demo" placeholder="(11) 99999-9999">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item: Menos de 5 = sem dropdown -->
+            <div class="checklist-item">
+                <div class="check-info">
+                    <input type="checkbox" class="check-box">
+                    <div class="check-content">
+                        <strong>Menos de 5 opções = sem dropdown</strong>
+                        <p>Poucas opções usam radio buttons.</p>
+                    </div>
+                </div>
+                <div class="check-example">
+                    <div class="ex-wrong">
+                        <select class="select-demo">
+                            <option>Sim</option>
+                            <option>Não</option>
+                            <option>Talvez</option>
+                        </select>
+                    </div>
+                    <div class="ex-correct">
+                        <div class="radio-list">
+                            <label><input type="radio" name="ex-radio"> Sim</label>
+                            <label><input type="radio" name="ex-radio"> Não</label>
+                            <label><input type="radio" name="ex-radio"> Talvez</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item: Ordenação lógica -->
+            <div class="checklist-item">
+                <div class="check-info">
+                    <input type="checkbox" class="check-box">
+                    <div class="check-content">
+                        <strong>Ordenação lógica das opções</strong>
+                        <p>Opções em ordem alfabética ou por frequência.</p>
+                    </div>
+                </div>
+                <div class="check-example">
+                    <div class="ex-wrong">
+                        <div class="option-list">
+                            <span>Word</span>
+                            <span>Excel</span>
+                            <span>Access</span>
+                        </div>
+                    </div>
+                    <div class="ex-correct">
+                        <div class="option-list">
+                            <span>Access</span>
+                            <span>Excel</span>
+                            <span>Word</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item: Altura 44px -->
+            <div class="checklist-item">
+                <div class="check-info">
+                    <input type="checkbox" class="check-box">
+                    <div class="check-content">
+                        <strong>Altura mínima de 44px</strong>
+                        <p>Botões e campos com área de toque adequada.</p>
+                    </div>
+                </div>
+                <div class="check-example">
+                    <div class="ex-wrong">
+                        <button class="btn-height small">28px</button>
+                    </div>
+                    <div class="ex-correct">
+                        <button class="btn-height proper">44px</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOCO 4: EXPERIÊNCIA -->
+        <section class="checklist-section">
+            <h2>4. Experiência e Segurança</h2>
+
+            <!-- Item: Confirmação -->
+            <div class="checklist-item">
+                <div class="check-info">
+                    <input type="checkbox" class="check-box">
+                    <div class="check-content">
+                        <strong>Página de confirmação</strong>
+                        <p>Feedback claro após o envio do formulário.</p>
+                    </div>
+                </div>
+                <div class="check-example">
+                    <div class="ex-wrong">
+                        <div class="confirm-demo none">(nada)</div>
+                    </div>
+                    <div class="ex-correct">
+                        <div class="confirm-demo success">✓ Enviado!</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item: Sem reset -->
+            <div class="checklist-item">
+                <div class="check-info">
+                    <input type="checkbox" class="check-box">
+                    <div class="check-content">
+                        <strong>Sem botão de redefinir</strong>
+                        <p>Não oferecer opção de apagar tudo acidentalmente.</p>
+                    </div>
+                </div>
+                <div class="check-example">
+                    <div class="ex-wrong">
+                        <div class="btn-pair">
+                            <button class="btn-demo btn-bad small">Limpar</button>
+                            <button class="btn-demo btn-good small">Enviar</button>
+                        </div>
+                    </div>
+                    <div class="ex-correct">
+                        <button class="btn-demo btn-good">Enviar Proposta</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESUMO -->
+        <section class="summary-section">
+            <h2>Resumo</h2>
+            <ul>
+                <li>Pedir apenas o necessário</li>
+                <li>Fácil de escanear visualmente</li>
+                <li>Controles apropriados para cada tipo de dado</li>
+                <li>Agrupar informações relacionadas</li>
+                <li>Confirmar envio com feedback claro</li>
+                <li>Nunca oferecer opções destrutivas facilmente</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="index.html">← Ver exemplos visuais detalhados</a></p>
+        <p class="source">Material didático para design de formulários web</p>
+    </footer>
+</body>
+</html>

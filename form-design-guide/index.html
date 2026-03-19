@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Boas Práticas em Design de Formulários</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Design de Formulários Web</h1>
+        <p class="subtitle">Guia visual de boas e más práticas</p>
+    </header>
+
+    <main>
+        <!-- ==========================================
+             SEÇÃO 1: ALTURA MÍNIMA DE ÁREA CLICÁVEL
+             ========================================== -->
+        <section class="example-section">
+            <h2>1. Altura Mínima de Área Clicável</h2>
+            <p class="description">Elementos interativos devem ter no mínimo 44px de altura para facilitar o toque em dispositivos móveis (recomendação WCAG).</p>
+            
+            <div class="comparison-grid">
+                <!-- ERRADO: inputs e botões muito pequenos dificultam o clique/toque -->
+                <div class="example wrong">
+                    <span class="label">Errado</span>
+                    <div class="example-content">
+                        <label for="email-wrong-1">E-mail</label>
+                        <!-- Input com apenas 28px de altura - muito pequeno para toque -->
+                        <input type="email" id="email-wrong-1" class="input-small" placeholder="seu@email.com">
+                        <!-- Botão com apenas 28px de altura -->
+                        <button type="button" class="btn-small">Enviar</button>
+                    </div>
+                    <p class="explanation">Altura de 28px - difícil de tocar em mobile</p>
+                </div>
+
+                <!-- CORRETO: altura mínima de 44px garante boa área de toque -->
+                <div class="example correct">
+                    <span class="label">Correto</span>
+                    <div class="example-content">
+                        <label for="email-correct-1">E-mail</label>
+                        <!-- Input com 44px de altura - tamanho adequado -->
+                        <input type="email" id="email-correct-1" class="input-proper" placeholder="seu@email.com">
+                        <!-- Botão com 44px de altura -->
+                        <button type="button" class="btn-proper">Enviar</button>
+                    </div>
+                    <p class="explanation">Altura mínima de 44px - fácil de tocar</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SEÇÃO 2: ESPAÇAMENTO ENTRE RADIO E TEXTO
+             ========================================== -->
+        <section class="example-section">
+            <h2>2. Espaçamento entre Radio Button e Texto</h2>
+            <p class="description">O texto do label deve ter espaçamento adequado do radio button para melhor legibilidade.</p>
+            
+            <div class="comparison-grid">
+                <!-- ERRADO: radio colado no texto dificulta a leitura -->
+                <div class="example wrong">
+                    <span class="label">Errado</span>
+                    <div class="example-content">
+                        <p class="field-label">Gênero musical favorito:</p>
+                        <!-- Sem gap entre o radio e o texto -->
+                        <label class="radio-no-gap">
+                            <input type="radio" name="genre-wrong">Rock
+                        </label>
+                        <label class="radio-no-gap">
+                            <input type="radio" name="genre-wrong">Jazz
+                        </label>
+                        <label class="radio-no-gap">
+                            <input type="radio" name="genre-wrong">Clássico
+                        </label>
+                    </div>
+                    <p class="explanation">Radio colado no texto - difícil de ler</p>
+                </div>
+
+                <!-- CORRETO: gap de 8px entre radio e texto -->
+                <div class="example correct">
+                    <span class="label">Correto</span>
+                    <div class="example-content">
+                        <p class="field-label">Gênero musical favorito:</p>
+                        <!-- Gap de 8px entre o radio e o texto -->
+                        <label class="radio-with-gap">
+                            <input type="radio" name="genre-correct">Rock
+                        </label>
+                        <label class="radio-with-gap">
+                            <input type="radio" name="genre-correct">Jazz
+                        </label>
+                        <label class="radio-with-gap">
+                            <input type="radio" name="genre-correct">Clássico
+                        </label>
+                    </div>
+                    <p class="explanation">Gap de 8px - melhor legibilidade</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SEÇÃO 3: LEI DA PROXIMIDADE
+             ========================================== -->
+        <section class="example-section">
+            <h2>3. Problema de Proximidade (Lei da Proximidade)</h2>
+            <p class="description">Instruções e textos de ajuda devem estar visualmente próximos do campo ao qual se referem.</p>
+            
+            <div class="comparison-grid">
+                <!-- ERRADO: instrução muito distante do campo -->
+                <div class="example wrong">
+                    <span class="label">Errado</span>
+                    <div class="example-content">
+                        <label for="password-wrong">Senha</label>
+                        <input type="password" id="password-wrong" class="input-proper">
+                        <!-- Instrução muito afastada do campo - quebra a associação visual -->
+                        <p class="hint-far">Mínimo de 8 caracteres, incluindo número e símbolo especial</p>
+                    </div>
+                    <p class="explanation">Instrução muito distante do campo</p>
+                </div>
+
+                <!-- CORRETO: instrução próxima ao campo relacionado -->
+                <div class="example correct">
+                    <span class="label">Correto</span>
+                    <div class="example-content">
+                        <label for="password-correct">Senha</label>
+                        <input type="password" id="password-correct" class="input-proper">
+                        <!-- Instrução logo abaixo do campo - clara associação -->
+                        <p class="hint-close">Mínimo de 8 caracteres, incluindo número e símbolo especial</p>
+                    </div>
+                    <p class="explanation">Instrução agrupada com o campo</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SEÇÃO 4: RADIO HORIZONTAL VS VERTICAL
+             ========================================== -->
+        <section class="example-section">
+            <h2>4. Radio Buttons: Horizontal vs Empilhado</h2>
+            <p class="description">Radio buttons empilhados verticalmente facilitam o rastreamento ocular e a leitura sequencial.</p>
+            
+            <div class="comparison-grid">
+                <!-- ERRADO: radio buttons horizontais dificultam a leitura -->
+                <div class="example wrong">
+                    <span class="label">Errado</span>
+                    <div class="example-content">
+                        <p class="field-label">Faixa etária:</p>
+                        <!-- Layout horizontal - difícil de escanear visualmente -->
+                        <div class="radio-horizontal">
+                            <label class="radio-with-gap">
+                                <input type="radio" name="age-wrong">18-25
+                            </label>
+                            <label class="radio-with-gap">
+                                <input type="radio" name="age-wrong">26-35
+                            </label>
+                            <label class="radio-with-gap">
+                                <input type="radio" name="age-wrong">36-45
+                            </label>
+                            <label class="radio-with-gap">
+                                <input type="radio" name="age-wrong">46+
+                            </label>
+                        </div>
+                    </div>
+                    <p class="explanation">Layout horizontal - difícil de escanear</p>
+                </div>
+
+                <!-- CORRETO: radio buttons empilhados verticalmente -->
+                <div class="example correct">
+                    <span class="label">Correto</span>
+                    <div class="example-content">
+                        <p class="field-label">Faixa etária:</p>
+                        <!-- Layout vertical - fácil rastreamento ocular -->
+                        <div class="radio-vertical">
+                            <label class="radio-with-gap">
+                                <input type="radio" name="age-correct">18-25
+                            </label>
+                            <label class="radio-with-gap">
+                                <input type="radio" name="age-correct">26-35
+                            </label>
+                            <label class="radio-with-gap">
+                                <input type="radio" name="age-correct">36-45
+                            </label>
+                            <label class="radio-with-gap">
+                                <input type="radio" name="age-correct">46+
+                            </label>
+                        </div>
+                    </div>
+                    <p class="explanation">Layout vertical - fácil de escanear</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SEÇÃO 5: TEXTO DO BOTÃO DE ENVIO
+             ========================================== -->
+        <section class="example-section">
+            <h2>5. Texto do Botão de Envio</h2>
+            <p class="description">O texto do botão deve descrever claramente a ação que será realizada.</p>
+            
+            <div class="comparison-grid">
+                <!-- ERRADO: texto genérico não comunica a ação -->
+                <div class="example wrong">
+                    <span class="label">Errado</span>
+                    <div class="example-content">
+                        <div class="form-mock">
+                            <label for="name-wrong-5">Nome completo</label>
+                            <input type="text" id="name-wrong-5" class="input-proper" placeholder="João Silva">
+                            <!-- Texto genérico - usuário não sabe o que vai acontecer -->
+                            <button type="button" class="btn-proper btn-generic">Enviar</button>
+                        </div>
+                    </div>
+                    <p class="explanation">"Enviar" é genérico e vago</p>
+                </div>
+
+                <!-- CORRETO: texto específico descreve a ação -->
+                <div class="example correct">
+                    <span class="label">Correto</span>
+                    <div class="example-content">
+                        <div class="form-mock">
+                            <label for="name-correct-5">Nome completo</label>
+                            <input type="text" id="name-correct-5" class="input-proper" placeholder="João Silva">
+                            <!-- Texto específico - ação clara -->
+                            <button type="button" class="btn-proper btn-specific">Criar minha conta</button>
+                        </div>
+                        <div class="btn-examples">
+                            <span class="btn-example">Baixar relatório</span>
+                            <span class="btn-example">Salvar alterações</span>
+                            <span class="btn-example">Confirmar pedido</span>
+                        </div>
+                    </div>
+                    <p class="explanation">Ação clara e específica</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SEÇÃO 6: AGRUPAMENTO DE OPÇÕES RELACIONADAS
+             ========================================== -->
+        <section class="example-section">
+            <h2>6. Agrupamento Visual de Opções Relacionadas</h2>
+            <p class="description">Opções relacionadas devem estar visualmente agrupadas com espaçamento consistente.</p>
+            
+            <div class="comparison-grid">
+                <!-- ERRADO: espaçamento excessivo quebra o agrupamento -->
+                <div class="example wrong">
+                    <span class="label">Errado</span>
+                    <div class="example-content">
+                        <p class="field-label">Forma de pagamento:</p>
+                        <!-- Espaçamento excessivo entre opções -->
+                        <div class="radio-scattered">
+                            <label class="radio-with-gap">
+                                <input type="radio" name="payment-wrong">Cartão de crédito
+                            </label>
+                            <label class="radio-with-gap">
+                                <input type="radio" name="payment-wrong">Boleto bancário
+                            </label>
+                            <label class="radio-with-gap">
+                                <input type="radio" name="payment-wrong">PIX
+                            </label>
+                        </div>
+                    </div>
+                    <p class="explanation">Espaçamento excessivo - parecem desconectados</p>
+                </div>
+
+                <!-- CORRETO: opções agrupadas com espaçamento adequado -->
+                <div class="example correct">
+                    <span class="label">Correto</span>
+                    <div class="example-content">
+                        <p class="field-label">Forma de pagamento:</p>
+                        <!-- Espaçamento adequado mantém agrupamento -->
+                        <div class="radio-grouped">
+                            <label class="radio-with-gap">
+                                <input type="radio" name="payment-correct">Cartão de crédito
+                            </label>
+                            <label class="radio-with-gap">
+                                <input type="radio" name="payment-correct">Boleto bancário
+                            </label>
+                            <label class="radio-with-gap">
+                                <input type="radio" name="payment-correct">PIX
+                            </label>
+                        </div>
+                    </div>
+                    <p class="explanation">Agrupamento visual claro</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SEÇÃO 7: SLIDER E INSTRUÇÃO
+             ========================================== -->
+        <section class="example-section">
+            <h2>7. Posicionamento do Slider em Relação à Instrução</h2>
+            <p class="description">O slider abaixo da instrução é preferível por seguir o fluxo natural de leitura (cima para baixo).</p>
+            
+            <div class="comparison-grid">
+                <!-- FUNCIONA, MAS NÃO É IDEAL: slider na mesma linha -->
+                <div class="example wrong">
+                    <span class="label">Aceitável</span>
+                    <div class="example-content">
+                        <div class="slider-inline">
+                            <!-- Slider na mesma linha da instrução -->
+                            <label for="volume-inline">Volume:</label>
+                            <input type="range" id="volume-inline" min="0" max="100" value="50">
+                            <span class="slider-value">50%</span>
+                        </div>
+                        <div class="slider-inline">
+                            <label for="brightness-inline">Brilho:</label>
+                            <input type="range" id="brightness-inline" min="0" max="100" value="75">
+                            <span class="slider-value">75%</span>
+                        </div>
+                    </div>
+                    <p class="explanation">Na mesma linha - funciona, mas menos claro</p>
+                </div>
+
+                <!-- PREFERÍVEL: slider abaixo da instrução -->
+                <div class="example correct preferred">
+                    <span class="label">Preferível ✓</span>
+                    <div class="example-content">
+                        <div class="slider-stacked">
+                            <!-- Slider abaixo da instrução - fluxo natural -->
+                            <label for="volume-stacked">Volume:</label>
+                            <div class="slider-row">
+                                <input type="range" id="volume-stacked" min="0" max="100" value="50">
+                                <span class="slider-value">50%</span>
+                            </div>
+                        </div>
+                        <div class="slider-stacked">
+                            <label for="brightness-stacked">Brilho:</label>
+                            <div class="slider-row">
+                                <input type="range" id="brightness-stacked" min="0" max="100" value="75">
+                                <span class="slider-value">75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="explanation">Abaixo da instrução - fluxo natural de leitura</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="checklist.html">Ver checklist de avaliação →</a></p>
+        <p class="source">Material didático para design de formulários web</p>
+    </footer>
+</body>
+</html>

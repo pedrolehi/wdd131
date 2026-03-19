@@ -82,15 +82,15 @@ const temples = [
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
   },
   {
-    templeName: "Lima Perú",
-    location: "Lima, Perú",
+    templeName: "Lima Peru",
+    location: "Lima, Peru",
     dedicated: "1986, Janeiro, 10",
     area: 9600,
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
   },
   {
-    templeName: "Cidade do México México",
+    templeName: "Cidade do México",
     location: "Cidade do México, México",
     dedicated: "1983, Dezembro, 2",
     area: 116642,

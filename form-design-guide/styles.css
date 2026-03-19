@@ -1,0 +1,334 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.5;
+    color: #222;
+    background: #fff;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    border-bottom: 2px solid #000;
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+header .subtitle {
+    font-size: 1rem;
+    color: #555;
+}
+
+.example-section {
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #ccc;
+}
+
+.example-section h2 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.example-section .description {
+    color: #444;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+@media (max-width: 600px) {
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.example {
+    padding: 16px;
+    border: 1px solid;
+}
+
+.example.wrong {
+    background: #ffeaea;
+    border-color: #c00;
+}
+
+.example.correct {
+    background: #eaffea;
+    border-color: #060;
+}
+
+.example.preferred {
+    background: #eaf4ff;
+    border-color: #06c;
+}
+
+.example .label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    padding: 2px 6px;
+    background: #000;
+    color: #fff;
+}
+
+.example.wrong .label {
+    background: #c00;
+}
+
+.example.correct .label {
+    background: #060;
+}
+
+.example.preferred .label {
+    background: #06c;
+}
+
+.example-content {
+    margin-bottom: 12px;
+}
+
+.example .explanation {
+    font-size: 0.8rem;
+    color: #666;
+    border-top: 1px dashed #999;
+    padding-top: 8px;
+    margin-top: 12px;
+}
+
+/* Inputs e botões */
+.input-small {
+    height: 28px;
+    padding: 0 8px;
+    font-size: 0.85rem;
+    border: 1px solid #999;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.btn-small {
+    height: 28px;
+    padding: 0 12px;
+    font-size: 0.85rem;
+    border: 1px solid #333;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.input-proper {
+    height: 44px;
+    padding: 0 12px;
+    font-size: 1rem;
+    border: 1px solid #999;
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.btn-proper {
+    height: 44px;
+    padding: 0 16px;
+    font-size: 1rem;
+    border: 1px solid #333;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-proper:hover,
+.btn-small:hover {
+    background: #555;
+}
+
+/* Radio buttons */
+.field-label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.radio-no-gap {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+.radio-no-gap input {
+    margin-right: 0;
+}
+
+.radio-with-gap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+/* Proximidade */
+.hint-far {
+    margin-top: 32px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.hint-close {
+    margin-top: 4px;
+    font-size: 0.75rem;
+    color: #666;
+}
+
+/* Radio layouts */
+.radio-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.radio-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Botões */
+.form-mock {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-mock label {
+    margin-bottom: 4px;
+}
+
+.btn-generic {
+    background: #888;
+    border-color: #888;
+}
+
+.btn-specific {
+    background: #060;
+    border-color: #060;
+}
+
+.btn-specific:hover {
+    background: #080;
+}
+
+.btn-examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.btn-example {
+    background: #eee;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    color: #555;
+    border: 1px solid #ccc;
+}
+
+/* Agrupamento */
+.radio-scattered {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.radio-grouped {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Sliders */
+.slider-inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.slider-inline label {
+    min-width: 60px;
+}
+
+.slider-stacked {
+    margin-bottom: 12px;
+}
+
+.slider-stacked label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.slider-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.slider-value {
+    min-width: 40px;
+    text-align: right;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+input[type="range"] {
+    flex: 1;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 24px 0;
+    color: #666;
+    font-size: 0.85rem;
+    border-top: 1px solid #ccc;
+    margin-top: 32px;
+}
+
+footer .source {
+    font-size: 0.75rem;
+    margin-top: 4px;
+}
+
+footer a {
+    color: #000;
+}
+
+/* Labels gerais */
+label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+input:focus,
+button:focus {
+    outline: 2px solid #000;
+    outline-offset: 1px;
+}

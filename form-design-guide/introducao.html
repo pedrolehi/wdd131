@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução a Formulários Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="introducao.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <h1><i data-lucide="file-text"></i> Formulários Web</h1>
+        <p class="subtitle">Introdução e Melhores Práticas</p>
+    </header>
+
+    <main>
+        <!-- SEÇÃO 1: O propósito dos sites -->
+        <section class="content-section">
+            <h2><i data-lucide="arrow-left-right"></i> Os Dois Propósitos de um Site</h2>
+            
+            <div class="two-way">
+                <div class="direction">
+                    <div class="arrow"><i data-lucide="arrow-right"></i></div>
+                    <div class="direction-content">
+                        <h3>Proprietário → Usuário</h3>
+                        <p>O site comunica informações através de:</p>
+                        <ul>
+                            <li><i data-lucide="type"></i> Texto</li>
+                            <li><i data-lucide="image"></i> Imagens</li>
+                            <li><i data-lucide="volume-2"></i> Áudio</li>
+                            <li><i data-lucide="video"></i> Vídeo</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="direction">
+                    <div class="arrow"><i data-lucide="arrow-left"></i></div>
+                    <div class="direction-content">
+                        <h3>Usuário → Proprietário</h3>
+                        <p>O usuário se comunica através de:</p>
+                        <ul>
+                            <li><i data-lucide="clipboard-list"></i> <strong>Formulários Web</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 2: Exemplo Página de Vendas -->
+        <section class="content-section">
+            <h2><i data-lucide="shopping-bag"></i> Exemplo: Página de Vendas</h2>
+            
+            <div class="example-box">
+                <h3><i data-lucide="send"></i> Comunicação do Site → Usuário</h3>
+                <p class="example-desc">O site apresenta informações sobre o produto:</p>
+                
+                <div class="mock-product-page">
+                    <div class="mock-product-image">
+                        <i data-lucide="headphones" class="product-icon"></i>
+                    </div>
+                    <div class="mock-product-details">
+                        <div class="mock-product-title">Fone de Ouvido Bluetooth Premium</div>
+                        <div class="mock-product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="reviews">(1.247 avaliações)</span>
+                        </div>
+                        <div class="mock-product-price">R$ 299,90</div>
+                        <div class="mock-product-desc">
+                            <div class="desc-line"></div>
+                            <div class="desc-line"></div>
+                            <div class="desc-line short"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <ul class="mock-legend">
+                    <li><i data-lucide="file-text"></i> Descrição do produto</li>
+                    <li><i data-lucide="star"></i> Avaliações em estrelas</li>
+                    <li><i data-lucide="message-square"></i> Reviews de compradores</li>
+                    <li><i data-lucide="camera"></i> Fotos do item</li>
+                </ul>
+            </div>
+            
+            <div class="example-box">
+                <h3><i data-lucide="reply"></i> Comunicação do Usuário → Site</h3>
+                <p class="example-desc">O usuário interage através de formulários:</p>
+                
+                <div class="mock-cart-area">
+                    <div class="mock-cart-controls">
+                        <label class="mock-label">Cor:</label>
+                        <select class="mock-select">
+                            <option>Preto</option>
+                            <option>Branco</option>
+                        </select>
+                        
+                        <label class="mock-label">Quantidade:</label>
+                        <select class="mock-select small">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    
+                    <button class="mock-btn-cart">
+                        <i data-lucide="shopping-cart"></i> Adicionar ao Carrinho
+                    </button>
+                    <button class="mock-btn-buy">
+                        <i data-lucide="credit-card"></i> Comprar Agora
+                    </button>
+                </div>
+                
+                <ul class="mock-legend">
+                    <li><i data-lucide="shopping-cart"></i> Formulário de carrinho</li>
+                    <li><i data-lucide="credit-card"></i> Formulário de checkout</li>
+                    <li><i data-lucide="user-plus"></i> Formulário de cadastro</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: Dor vs Recompensa -->
+        <section class="content-section highlight-section">
+            <h2><i data-lucide="scale"></i> O Equilíbrio: Dor vs Recompensa</h2>
+            
+            <p class="intro-text">Há um delicado equilíbrio entre <strong>dor</strong> e <strong>recompensa</strong> que você precisa dominar para conseguir que alguém complete um formulário.</p>
+            
+            <div class="balance-diagram">
+                <div class="balance-side reward">
+                    <h3><i data-lucide="gift"></i> Recompensa</h3>
+                    <p>O que o site oferece:</p>
+                    <ul>
+                        <li><i data-lucide="package"></i> Itens para venda</li>
+                        <li><i data-lucide="book-open"></i> Acesso a informações</li>
+                        <li><i data-lucide="calendar"></i> Participação em eventos</li>
+                        <li><i data-lucide="download"></i> Downloads</li>
+                        <li><i data-lucide="user-check"></i> Cadastro em serviços</li>
+                    </ul>
+                </div>
+                
+                <div class="balance-center">
+                    <div class="scale">
+                        <span class="vs">vs</span>
+                    </div>
+                </div>
+                
+                <div class="balance-side pain">
+                    <h3><i data-lucide="frown"></i> Dor</h3>
+                    <p>O esforço do usuário:</p>
+                    <ul>
+                        <li><i data-lucide="edit-3"></i> Preencher campos</li>
+                        <li><i data-lucide="lock"></i> Fornecer dados pessoais</li>
+                        <li><i data-lucide="clock"></i> Tempo gasto</li>
+                        <li><i data-lucide="alert-circle"></i> Frustração com erros</li>
+                        <li><i data-lucide="help-circle"></i> Confusão com o layout</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="outcomes">
+                <div class="outcome success">
+                    <h4><i data-lucide="check-circle"></i> Dor &lt; Recompensa</h4>
+                    <p>O usuário completa o formulário. <strong>Você ganha.</strong></p>
+                </div>
+                
+                <div class="outcome failure">
+                    <h4><i data-lucide="x-circle"></i> Dor &gt; Recompensa</h4>
+                    <p>O usuário abandona. <strong>Você perde um cliente.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 4: Conclusão -->
+        <section class="content-section">
+            <h2><i data-lucide="alert-triangle"></i> Por que isso importa?</h2>
+            
+            <blockquote>
+                <i data-lucide="quote"></i>
+                "Coletar informações dos usuários do seu site é realmente importante. Você deve ter muito cuidado ao projetar e construir formulários web."
+            </blockquote>
+            
+            <p>Mesmo oferecendo coisas incríveis, um formulário mal projetado pode afastar seus clientes. As melhores práticas existem para <strong>minimizar a dor</strong> e garantir que os usuários completem suas ações.</p>
+            
+            <div class="next-steps">
+                <h3><i data-lucide="arrow-right-circle"></i> Próximos Passos</h3>
+                <ul>
+                    <li><a href="index.html"><i data-lucide="eye"></i> Ver exemplos visuais de boas e más práticas</a></li>
+                    <li><a href="checklist.html"><i data-lucide="check-square"></i> Consultar checklist de avaliação</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="index.html"><i data-lucide="arrow-right"></i> Ver exemplos visuais</a></p>
+        <p class="source">Material didático para design de formulários web</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

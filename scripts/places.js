@@ -11,9 +11,5 @@ let speed = 5;
 if (tempC <= 10 && speed > 4.8) {
   document.getElementById("wcf").innerHTML = `${computeWindChillC(tempC, speed).toFixed(1)} °C`;
 } else {
-    document.getElementById("wcf").innerHTML = "N/A";
+    document.getElementById("wcf").innerHTML = "N/D";
 }
-
-// if(tempF <= 50 && speed > 3) {
-//   document.getElementById("wcf").innerHTML = `${computeWindChillF(tempF, speed).toFixed(1)} °F`;
-// }

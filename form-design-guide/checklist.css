@@ -1,0 +1,324 @@
+.intro {
+    margin-bottom: 24px;
+    color: #444;
+}
+
+.checklist-section {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ccc;
+}
+
+.checklist-section h2 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 4px;
+}
+
+.checklist-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+}
+
+@media (max-width: 600px) {
+    .checklist-item {
+        grid-template-columns: 1fr;
+    }
+}
+
+.check-info {
+    display: flex;
+    gap: 12px;
+}
+
+.check-box {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    cursor: pointer;
+    margin: 0;
+}
+
+.check-content strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.check-content p {
+    font-size: 0.85rem;
+    color: #555;
+    margin: 0;
+}
+
+.check-example {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.ex-wrong,
+.ex-correct {
+    flex: 1;
+    padding: 8px;
+    font-size: 0.85rem;
+}
+
+.ex-wrong {
+    background: #ffeaea;
+    border: 1px solid #c00;
+}
+
+.ex-correct {
+    background: #eaffea;
+    border: 1px solid #060;
+}
+
+.ex-label {
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+.ex-wrong .ex-label {
+    color: #c00;
+}
+
+.ex-correct .ex-label {
+    color: #060;
+}
+
+/* Botões demo */
+.btn-demo {
+    padding: 6px 12px;
+    border: 1px solid #333;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.btn-demo.small {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+}
+
+.btn-bad {
+    background: #ddd;
+    color: #333;
+}
+
+.btn-good {
+    background: #333;
+    color: #fff;
+}
+
+/* Labels demo */
+.label-demo {
+    display: block;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.label-demo.small {
+    font-size: 0.75rem;
+    margin-bottom: 2px;
+}
+
+.required {
+    color: #c00;
+}
+
+/* Inputs demo */
+.input-demo {
+    border: 1px solid #999;
+    padding: 4px 6px;
+    font-size: 0.8rem;
+    width: 100%;
+    max-width: 120px;
+}
+
+.input-demo.small {
+    max-width: 80px;
+}
+
+.input-demo.tiny {
+    max-width: 50px;
+}
+
+/* Layout demos */
+.layout-multi {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+.layout-single {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.mini-field {
+    background: #ccc;
+    height: 12px;
+    width: 40px;
+}
+
+.mini-field.wide {
+    width: 80px;
+}
+
+/* Block demos */
+.block-demo {
+    width: 80px;
+}
+
+.mini-line {
+    background: #ccc;
+    height: 6px;
+    margin-bottom: 4px;
+}
+
+.mini-section {
+    border: 1px solid #999;
+    padding: 4px;
+    margin-bottom: 4px;
+}
+
+.mini-section .mini-line:last-child {
+    margin-bottom: 0;
+}
+
+/* Label position demos */
+.label-inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.label-above {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Phone split */
+.phone-split {
+    display: flex;
+    gap: 4px;
+}
+
+/* Select demo */
+.select-demo {
+    border: 1px solid #999;
+    padding: 4px;
+    font-size: 0.8rem;
+    width: 100%;
+    max-width: 100px;
+}
+
+/* Radio list */
+.radio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 0.8rem;
+}
+
+.radio-list label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+}
+
+/* Option list */
+.option-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 0.8rem;
+}
+
+/* Height buttons */
+.btn-height {
+    border: 1px solid #333;
+    background: #333;
+    color: #fff;
+    font-size: 0.75rem;
+    width: 60px;
+}
+
+.btn-height.small {
+    height: 28px;
+}
+
+.btn-height.proper {
+    height: 44px;
+}
+
+/* Hint demos */
+.hint-demo {
+    font-size: 0.7rem;
+    color: #666;
+    margin: 0;
+}
+
+.hint-demo.far {
+    margin-top: 16px;
+}
+
+.hint-demo.close {
+    margin-top: 2px;
+}
+
+/* Confirm demos */
+.confirm-demo {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    text-align: center;
+}
+
+.confirm-demo.none {
+    color: #999;
+    font-style: italic;
+}
+
+.confirm-demo.success {
+    background: #060;
+    color: #fff;
+}
+
+/* Btn pair */
+.btn-pair {
+    display: flex;
+    gap: 4px;
+}
+
+/* Summary */
+.summary-section {
+    background: #f5f5f5;
+    padding: 16px;
+    border: 1px solid #ccc;
+}
+
+.summary-section h2 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.summary-section ul {
+    margin-left: 20px;
+}
+
+.summary-section li {
+    margin-bottom: 4px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #000;
+}
