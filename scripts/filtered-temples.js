@@ -1,4 +1,5 @@
 let d = new Date();
+
 document.getElementById("currentYear").innerHTML = `&copy;${d.getFullYear()}`;
 document.querySelector('#lastModified').textContent = `Última Modificação: ${document.lastModified}`;
 
@@ -14,7 +15,7 @@ function toggleActive(element) {
   document.querySelectorAll('a').forEach(link => {
     link.classList.remove('active');
   });
-  
+
   element.classList.add("active");
 }
 
@@ -22,18 +23,22 @@ document.querySelector('#all').addEventListener('click', () => {
   toggleActive(document.querySelector('#all'));
   createTempleCard(temples);
 });
+
 document.querySelector('#old').addEventListener('click', () => {
   toggleActive(document.querySelector('#old'));
   createTempleCard(temples.filter(temple => new Date(temple.dedicated) < new Date('1950-01-01')));
 });
+
 document.querySelector('#new').addEventListener('click', () => {
   toggleActive(document.querySelector('#new'));
   createTempleCard(temples.filter(temple => new Date(temple.dedicated) >= new Date('1950-01-01')));
 });
+
 document.querySelector('#large').addEventListener('click', () => {
   toggleActive(document.querySelector('#large'));
   createTempleCard(temples.filter(temple => temple.area >= 50000));
 });
+
 document.querySelector('#small').addEventListener('click', () => {
   toggleActive(document.querySelector('#small'));
   createTempleCard(temples.filter(temple => temple.area < 50000));
